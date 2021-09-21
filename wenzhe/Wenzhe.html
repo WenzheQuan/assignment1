@@ -30,16 +30,28 @@
 				font-size: 1.75em;
 				color: red
 			}
+			div {
+ 
+                   border: 1px dashed black;
+                     }
+ 
+           .cls {
+                   display: none;
+                 }
+
         </style>
-        <script>
-            // javascript for more algorithmic functionality
-        </script>
+
+          <script>
+          
+
+         </script>
+
     </head>
     <body>
         <header>  <!-- this element is for navigation and Logo etc -->
             <h2>Wenzhe Quan</h2>
             <nav>
-                  <a href="https://www.cmu.edu/hub/registrar/docs/phonetic-spelling-instructions.pdf"><h2>[wen-Ddge qui-En]</h2></a>
+                  <a href="https://www.cmu.edu/hub/registrar/docs/phonetic-spelling-instructions.pdf"><h2>[wen-Dge qui-En]</h2></a>
 
             </nav>
         </header>
@@ -50,19 +62,70 @@
                     <h2>Content</h2>
 		    <ol>Courses List</ol>
                     <ul>
-			    <li class="Web">1.9014</li>
+			    <li class="Web">Data management</li>
 
-			    <li class="Web">2.9063</li>
-			     <li>3.9065</li>
-			    <li>4.9021</li>
-			    <p>Sapn test <span style="display: inline-block; width: 200px; background-color: yellow; text-align: center;">test</span> test <span class="Web";>test</span> <span style="color:green">test</span> <span class="Web";>test</span> test test <span style="color:blue">test</span> test test test test test test test  </p>
-                    </ul>
+			    <li class="Web">Web Technologies</li>
+			     <li>Digital Image Processing</li>
+			    <li>Data Analytics</li>
+
+	             
+                  <div id="dv" class = "cls"><li>Unknown</div>
+                  <input type="button" value="more" id="btn"/>
+                  <script src="common.js"></script>
+			    <p>Sapn test <span style="display: inline-block; width: 200px; background-color: yellow; text-align: center;">test</span> 
+			    test <span class="Web";>test</span> 
+			    <span style="color:green">test</span> 
+			    <span class="Web";>test</span> test test 
+			    <span style="color:blue">test</span> test test
+			    <span class="Web"> test test </span>
+			     test test test  </p>
+                 </ul>
                 </section>
                 
             </article>
         </main>
-        
-    
+       
+        <script>
+           function my$(id) {
+            return document.getElementById(id);
+              }
+           
+              my$("btn").onclick = function () {
+           
+ 
+       
+               if (my$("dv").className != "cls") {
+     
+                my$("dv").className = "cls";
+                 this.value = "more";
+               } else {
+
+                  my$("dv").className = "";
+                this.value = "hide";
+              }
+             };
+
+
+
+             window.onload = function () {
+
+             	var text = "";
+                var possible = "abcdefghijklmnopqrstuvwxyz";
+
+                for (var i = 0; i < 4; i++)
+               text += possible.charAt(Math.floor(Math.random() * possible.length));
+              var d = document.getElementById('d');
+     
+              var c=document.getElementsByClassName('Web');
+              for (var i = 0;i<c.length;i++ ){
+               c[i].innerText=text;
+               }
+              }
+            </script>
+
+
+
     <script src="./Wenzhe_files/dynamicCSS.js.下載"></script> <!-- this is my cheat to dynamically adding css files to this html using url parameters -->
 
-</body></html>
+
+     </body></html>
