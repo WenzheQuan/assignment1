@@ -4,13 +4,44 @@
         <!--link rel="stylesheet" href="home.css" /-->
 <link rel="stylesheet"  type="text/css"  href="C:\Users\ASUS\Desktop\WESTERN CLASS\Web\Git Base\assignment1\V_First.css" >
         <style>
+		*{
+            	font-family: 'Recursive', sans-serif;
+				font color: Sienna ;
+				background-color: white;
+			}
+			li {
+				border:1px dashed black
+				
+			}
+			p {
+				background-color: #CECECE;
+			}
+			h1,h2,h3 {
+				font-family: 'Luckiest Guy', cursive;
+			}
+			li.Web{
+				font-size: 1.75em;
+			}
+			p.Web{
+				font-size: 1.75em;
+			}
+			span.Web{
+				font-size: 1.75em;
+				color: red
+			}
+			div {
+ 
+                   border: 1px dashed black;
+                     }
+ 
+           .cls {
+                   display: none;
+                 }
             
         </style>
 
           <script>
-          
-
-         </script>
+          </script>
 
     </head>
     <body>
@@ -25,19 +56,20 @@
    
             <article>
                 <section id="pages">
-                    <h2>Content</h2>
-		    <ol>Courses List</ol>
-                    <ul>
+                 <input type="button" value="more" id="btn"/>
+		    <h2>Courses List</h2>
+		    <div id="dv">
+                  
 			    <li class="Web">Data management</li>
 
 			    <li class="Web">Web Technologies</li>
 			     <li>Digital Image Processing</li>
 			    <li>Data Analytics</li>
+			    
+			    </div>
+			   
 
-	             
-                  <div id="dv" class = "cls"><li>Unknown</div>
-                  <input type="button" value="more" id="btn"/>
-                  <script src="common.js"></script>
+                 <script src="common.js"></script>
 			    <p>Sapn test <span style="display: inline-block; width: 200px; background-color: yellow; text-align: center;">test</span> 
 			    test <span class="Web";>test</span> 
 			    <span style="color:green">test</span> 
@@ -45,16 +77,43 @@
 			    <span style="color:blue">test</span> test test
 			    <span class="Web"> test test </span>
 			     test test test  </p>
-                 </ul>
+                 
                 </section>
                 
             </article>
         </main>
-       
-   <script type="text/javascript" src="C:\Users\ASUS\Desktop\WESTERN CLASS\Web\Git Base\assignment1\Wenzhe.js"></script>
+        <script>
+        function mm(id){
+				return document.getElementById(id)
+			}
+			
+			mm("btn").onclick=function(){
+		        for (var i = 0; i < 1; i++) {
+				var liobj=document.createElement("li");
+				liobj.innerHTML="Unknown"
+				mm("dv").appendChild(liobj);
+				liobj.onmousemove=mouseroverHandle;
+				liobj.onmouseout=onmouseoutHandle;
+		          }
+			   }
+			   function mouseroverHandle(){}
+			   function onmouseoutHandle(){}
 
 
+             window.onload = function () {
 
+             	var text = "";
+                var possible = "abcdefghijklmnopqrstuvwxyz";
 
+                for (var i = 0; i < 4; i++)
+               text += possible.charAt(Math.floor(Math.random() * possible.length));
+              var d = document.getElementById('d');
+     
+              var c=document.getElementsByClassName('Web');
+              for (var i = 0;i<c.length;i++ ){
+               c[i].innerText=text;
+               }
+              }
+        </script>
 
      </body></html>
