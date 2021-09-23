@@ -1,0 +1,33 @@
+*{
+            	font-family: 'Recursive', sans-serif;
+				font color: Sienna ;
+				background-color: white;
+			}
+			li {
+				border:1px dashed black
+				
+			}
+			p {
+				background-color: #CECECE;
+			}
+			h1,h2,h3 {
+				font-family: 'Luckiest Guy', cursive;
+			}
+			li.Web{
+				font-size: 1.75em;
+			}
+			p.Web{
+				font-size: 1.75em;
+			}
+			span.Web{
+				font-size: 1.75em;
+				color: red
+			}
+			div {
+ 
+                   border: 1px dashed black;
+                     }
+ 
+           .cls {
+                   display: none;
+                 }
