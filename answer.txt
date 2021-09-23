@@ -1,0 +1,74 @@
+git init 
+git add .
+git commit -m “hello Wenzhe”
+ssh-keygen -t rsa -C “email@uwo.ca”
+git remote add origin git@github.com:WenzheQuan/assignment1.git
+git pull origin master
+git push origin master
+
+git checkout -b separateCSS
+git add Wenzhe.html
+git V_First.css
+git commit -m "separate CSS"
+git checkout master
+
+git checkout -b separateJS
+git add Wenzhe.html
+git add Wenzhe.js
+git commit -m "separate JS"
+git checkout master
+
+
+Answer of stage 6:
+1. git merge conflicts, find the conflicting file according to the prompt, and resolve the conflict
+If the file conflicts, there will be a similar mark
+
+2. After modification, execute git add to conflict file name
+
+3. Go to the operation interface similar to vim and delete the conflict-related lines
+
+4. Push directly, because the merge operation has just been performed
+
+OR
+
+The Recursive strategy:
+
+The Recursive strategy is the default strategy adopted by Git when merging two branches. 
+It only applies to merging between two branches. 
+Therefore, for the merging of more than two branches, 
+it is necessary to repeatedly merge in pairs to finally complete the merging of all branches (this is also the origin of the name Recursive). 
+In essence, Recursive is a kind of Three-Way Merge. 
+Its characteristic is that if Git finds more than one common ancestor that meets the conditions on the two branches participating i
+n the merge when looking for a common ancestor, 
+it will merge the common ancestor first and create a temporary snapshot. 
+Then, use the temporarily generated "virtual ancestor" as the basis for merging, and then merge the branches.
+
+
+Textual output:
+$ git log --all
+commit 9e7ce7deead1904886260f8faf9af0214b04db7c (HEAD -> master, origin/master)
+Merge: e2b3c0a 6d3e809
+Author: WenzheQuan <wquan5@uwo.ca>
+Date:   Wed Sep 22 22:20:25 2021 -0400
+
+    Merge branch 'separateJS'
+
+commit 6d3e8095b0c05a8338e24e8ecefaba4b0ac9438a (separateJS)
+Author: WenzheQuan <wquan5@uwo.ca>
+Date:   Wed Sep 22 22:17:24 2021 -0400
+
+    separate JS
+
+commit e2b3c0a76a73e96491917c404eead77c8fa04bef (separateCSS)
+Author: WenzheQuan <wquan5@uwo.ca>
+Date:   Wed Sep 22 22:09:43 2021 -0400
+
+    separate CSS
+
+commit 0159db8942d2ad7eba0f3404a2e0e5abcf0ab9ee
+Author: WenzheQuan <wquan5@uwo.ca>
+Date:   Wed Sep 22 21:51:41 2021 -0400
+
+    Wenzhe.html does it all
+
+
